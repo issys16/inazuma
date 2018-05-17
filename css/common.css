@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.editor {
+  width: 50%;
+  height: 100vh;
+}
+
+.editor:first-child {
+  float: left;
+}
+
+.editor:last-child::after {
+  display: none;
+  content: '';
+  clear: both;
+}

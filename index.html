@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>(⚡️) リアルタイムコード共有エディタ</title>
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
 </head>
 <body>
-  <h1>inazuma</h1>
+  <div id="editor_left" class="editor"></div>
+  <div id="editor_right" class="editor"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+  <script src='/socket.io/socket.io.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js"></script>
+  <script>
+    $(function(){
+      var editor_left = ace.edit("editor_left");
+      editor_left.setTheme("ace/theme/monokai");
+      editor_left.setFontSize(14);
+
+      var editor_right = ace.edit("editor_right");
+      editor_right.setTheme("ace/theme/monokai");
+      editor_right.setFontSize(14);
+
+      var socket = io.connect();
+      
+      var flg = true;
+      editor_left.on('change', function(e){
+        if(flg){
+          socket.json.emit('emit_left_from_client', {
+            body: editor_left.getValue(),
+            cursor: editor_left.selection.getCursor()
+          });
+        }
+      });
+
+      socket.on('emit_left_from_server', function(data){
+        flg = false;
+        editor_left.setValue(data.body);
+        editor_left.gotoLine(data.cursor.row + 1, data.cursor.column + 1);
+        flg = true;
+      });
+
+      editor_right.on('change', function(e){
+        if(flg){
+          socket.json.emit('emit_right_from_client', {
+            body: editor_right.getValue(),
+            cursor: editor_right.selection.getCursor()
+          });
+        }
+      });
+
+      socket.on('emit_right_from_server', function(data){
+        flg = false;
+        editor_right.setValue(data.body);
+        editor_right.gotoLine(data.cursor.row + 1, data.cursor.column + 1);
+        flg = true;
+      });
+    });
+  </script>
 </body>
 </html>

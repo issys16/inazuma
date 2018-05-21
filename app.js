@@ -20,6 +20,19 @@ function handler(req, res) {
         res.end();
       });
       break;
+    case 'png':
+    case 'webmanifest':
+    case 'svg':
+      fs.readFile(__dirname + '/' + url, function(err, data){
+        if (err) {
+          res.writeHead(500);
+          return res.end('Error');
+        }
+        res.writeHead(200);
+        res.write(data);
+        res.end();
+      });
+      break;
     default:
       fs.readFile(__dirname + '/index.html', function(err, data){
         if (err) {

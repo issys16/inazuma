@@ -17,3 +17,30 @@
   content: '';
   clear: both;
 }
+
+#editor_left_language {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: -2px;
+  z-index: 9999;
+  width: 50vw;
+  text-align: right;
+}
+
+#editor_right_language {
+  position: fixed;
+  bottom: 0;
+  left: 50vw;
+  margin-left: -2px;
+  z-index: 9999;
+  width: 50vw;
+  text-align: right;
+}
+
+select {
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  text-align: right;
+}

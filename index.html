@@ -375,16 +375,16 @@
         editor_right.gotoLine(data.cursor.row + 1, data.cursor.column + 1);
         flg = true;
       });
-    });
 
-    $("#editor_left_language_select").on("change", function(e){
-      editor_left.session.setMode("ace/mode/" + $("#editor_left_language_select").val());
-    });
+      $("#editor_left_language_select").on("change", function(e){
+        editor_left.session.setMode("ace/mode/" + $("#editor_left_language_select").val());
+      });
+  
+      $("#editor_right_language_select").on("change", function(e){
+        editor_right.session.setMode("ace/mode/" + $("#editor_right_language_select").val());
+      });
 
-    $("#editor_right_language_select").on("change", function(e){
-      editor_right.session.setMode("ace/mode/" + $("#editor_right_language_select").val());
     });
-
   </script>
 </body>
 </html>

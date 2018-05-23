@@ -39,6 +39,8 @@
 }
 
 select {
+  -webkit-appearance: button;
+  appearance: button;
   background-color: #202020;
   color: #fff;
   border: none;

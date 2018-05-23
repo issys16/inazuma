@@ -91,12 +91,18 @@ select {
   height: 50vh;
   margin: 25vh auto;
   text-align: center;
-  font-family: "Sawarabi Mincho";
+  font-family: "Rounded Mplus 1c";
   color: #DFDFDF;
 }
 
 #flashVisal_body h1 {
   font-size: 15px;
+}
+
+#flashVisal_body p {
+  margin-top: 10px;
+  font-size: 8px;
+  color: #6D6D6D;
 }
 
 #flashVisal_body img {

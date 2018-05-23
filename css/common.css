@@ -87,13 +87,16 @@ select {
 }
 
 #flashVisal_body {
-  width: 50vw;
+  width: 100vw;
   height: 50vh;
   margin: 25vh auto;
   text-align: center;
-  font-size 50px;
   font-family: "Sawarabi Mincho";
   color: #DFDFDF;
+}
+
+#flashVisal_body h1 {
+  font-size: 15px;
 }
 
 #flashVisal_body img {

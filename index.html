@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>リアルタイムコード共有エディタ - inazuma</title>
   <link rel="stylesheet" type="text/css" href="/css/common.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -14,9 +15,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
+  <!-- フラッシュビジュアル -->
+  <div id="flashVisual">
+    <div id="flashVisal_body">
+      <img src="/images/zap.png" alt="inazuma"><br>
+      <h1>- inazuma -<br>リアルタイムコード共有エディタ</h1>
+    </div>
+  </div>
+  <script>
+    setTimeout(function(){
+      $("#flashVisual").fadeOut("slow");
+    }, 2000);
+  </script>
+
+  <!-- エディタエリア -->
   <div id="editor_left" class="editor"></div>
   <div id="editor_right" class="editor"></div>
 
+  <!-- シンタックスハイライト設定 -->
   <div id="editor_left_language">
     <select id="editor_left_language_select" name="editor_left_language">
       <option value="abap">ABAP</option>

@@ -3,6 +3,19 @@
   padding: 0;
 }
 
+select {
+  -webkit-appearance: button;
+  appearance: button;
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  text-align: right;
+}
+
+.editor {
+  float: left;
+}
+
 @media screen and (min-width: 481px) {
   .editor {
     width: 50%;
@@ -16,16 +29,6 @@
     height: 50vh;
     border-bottom: 3px solid #DFDFDF;
   }
-}
-
-.editor:first-child {
-  float: left;
-}
-
-.editor:last-child::after {
-  display: block;
-  content: '';
-  clear: both;
 }
 
 @media screen and (min-width: 481px) {
@@ -72,11 +75,28 @@
   }
 }
 
-select {
-  -webkit-appearance: button;
-  appearance: button;
+#flashVisual {
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: #202020;
-  color: #fff;
-  border: none;
-  text-align: right;
+}
+
+#flashVisal_body {
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh auto;
+  text-align: center;
+  font-size 50px;
+  font-family: "Sawarabi Mincho";
+  color: #DFDFDF;
+}
+
+#flashVisal_body img {
+  height: 30vh;
+  margin-bottom: 30px;
 }

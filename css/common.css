@@ -52,7 +52,7 @@
 @media screen and (max-width: 480px) {
   #editor_left_language {
     position: fixed;
-    bottom: -50vh;
+    bottom: 50vh;
     left: 0;
     margin-left: -2px;
     z-index: 9999;

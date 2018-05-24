@@ -127,7 +127,7 @@ select {
 }
 
 #splash_2 button {
-  width: 50vh;
+  width: 50vw;
   height: 50px;
   font-family: "Rounded Mplus 1c";
   font-weight: bold;

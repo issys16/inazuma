@@ -440,7 +440,8 @@
     $(function(){
       $("#splash_2 button").on("click", function(){
         $("#splash_2").fadeOut("fast");
-        history.replaceState('','', Math.random().toString(36).slice(-8));
+        roomName = Math.random().toString(36).slice(-8);
+        history.replaceState('','', roomName);
         initEditor();
       });
     })

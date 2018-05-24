@@ -378,12 +378,12 @@
     function initEditor() {
       var editor_left = ace.edit("editor_left");
       editor_left.setTheme("ace/theme/monokai");
-      editor_left.session.setMode("ace/mode/ABAP");
+      editor_left.session.setMode("ace/mode/javascript");
       editor_left.setFontSize(14);
 
       var editor_right = ace.edit("editor_right");
       editor_right.setTheme("ace/theme/monokai");
-      editor_right.session.setMode("ace/mode/ABAP");
+      editor_right.session.setMode("ace/mode/javascript");
       editor_right.setFontSize(14);
 
       var socket = io.connect();

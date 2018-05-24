@@ -46,10 +46,17 @@ function handler(req, res) {
   }
 }
 io.sockets.on('connection', function(socket){
-  socket.on('emit_left_from_client', function(data){
-    socket.broadcast.emit('emit_left_from_server', data);
+  socket.on('connect_room_from_client', function(data){
+    socket.join(data.room);
   });
+
+  socket.on('emit_left_from_client', function(data){
+    socket.join(data.room);
+    socket.broadcast.to(data.room).emit('emit_left_from_server', data);
+  });
+
   socket.on('emit_right_from_client', function(data){
-    socket.broadcast.emit('emit_right_from_server', data);
+    socket.join(data.room);
+    socket.broadcast.to(data.room).emit('emit_right_from_server', data);
   });
 });

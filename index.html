@@ -381,12 +381,12 @@
       if (roomName){
         setTimeout(function(){
           $("#splash_1").fadeOut("slow");
+          $("#splash_2").hide();
           initEditor();
         }, 2000);
       } else {
         setTimeout(function(){
           $("#splash_1").fadeOut("slow");
-          $("#splash_2").fadeIn("fast");
         }, 2000);
       }
     }

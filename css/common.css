@@ -106,19 +106,29 @@ select {
   font-size: 15px;
 }
 
-.splash_body p {
+#splash_1 {
+  z-index: 9999;
+}
+
+a:link, a:visited {
+  color: #04C;
+}
+
+#splash_1 p.about, #splash_2 p.about{
+  margin-top: 20px;
+  font-size: 8px;
+  color: #DFDFDF;
+}
+
+#splash_1 p.copyright, #splash_2 p.copyright {
   margin-top: 10px;
   font-size: 8px;
   color: #6D6D6D;
 }
 
-.splash_body img {
+#splash_1 img {
   height: 30vh;
   margin-bottom: 30px;
-}
-
-#splash_1 {
-  z-index: 9999;
 }
 
 #splash_2 {
@@ -146,7 +156,7 @@ select {
   border-left: 2px solid #6D6D6D;
 }
 
-#splash_2 p {
+#splash_2 p.desc {
   font-family: "Rounded Mplus 1c";
   font-size: 13px;
   color: #DFDFDF;

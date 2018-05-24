@@ -1,0 +1,24 @@
+{
+  "name": "inazuma",
+  "version": "1.0.0",
+  "description": "- inazuma is live share code editor.",
+  "main": "app.js",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issy-s16/inazuma.git"
+  },
+  "author": "Shogo Ishikura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/issy-s16/inazuma/issues"
+  },
+  "homepage": "https://github.com/issy-s16/inazuma#readme"
+}

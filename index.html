@@ -391,6 +391,20 @@
       socket.json.emit('connect_room_from_client', {
         room: roomName
       });
+
+      socket.on('init_left_from_server', function(data){
+        flg = false;
+        editor_left.setValue(data);
+        editor_left.gotoLine(0,0);
+        flg = true;
+      });
+
+      socket.on('init_right_from_server', function(data){
+        flg = false;
+        editor_right.setValue(data);
+        editor_right.gotoLine(0,0);
+        flg = true;
+      });
       
       var flg = true;
       editor_left.on('change', function(e){

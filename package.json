@@ -4,6 +4,7 @@
   "description": "- inazuma is live share code editor.",
   "main": "app.js",
   "dependencies": {
+    "forever": "^0.15.3",
     "redis": "^2.8.0",
     "socket.io": "^2.1.0"
   },

@@ -168,7 +168,7 @@ a:link, a:visited {
   margin-top: 30px;
 }
 
-.fb-share-button { /* Facebook */
+.fb-like { /* Facebook */
     display: inline-block;
     height: 20px;
     overflow: hidden;

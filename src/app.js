@@ -1,4 +1,4 @@
-var redis = require('redis').createClient();
+var redis = require('redis').createClient(6379, 'redis');
 
 var app = require('http').createServer(handler),
     io = require('socket.io').listen(app),

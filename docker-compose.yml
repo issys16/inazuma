@@ -1,0 +1,19 @@
+version: '3'
+services:
+  node:
+    build: ./docker/node
+    image: node-express-dev:1.0
+    container_name: inazuma_node
+    tty: true
+    volumes:
+      - ./src:/app
+    ports:
+      - 8080:1337
+    links:
+      - redis
+  redis:
+    image: redis:latest
+    container_name: inazuma_redis
+    ports:
+      - 6379:6379
+    command: redis-server --appendonly yes
